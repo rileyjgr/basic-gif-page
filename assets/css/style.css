@@ -11,41 +11,109 @@ textarea {
   width: 225px;
 }
 
+.btn {
+  color: white;
+  background-color: red;
+}
+
 gif {
   height: 100px;
   width: 100px;
 }
 
-#images1{
-  height: 100px;
-  width: 100px;
-  float: left;
-  align: left;
+body {
+  background-color: rgba(211,211,211);
+}
+
+#images1 {
+  width: 100%;
   position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
 }
 
 
-#images2{
-  height: 100px;
-  width: 100px;
-  float: left;
+#images2 {
+  width: 100%;
+  margin: 5px;
   position: absolute;
+  color: green;
+  border: 5px;
 }
 
 
-#images3{
-  height: 100px;
-  width: 100px;
-  float: left;
+#images3 {
+  width: 100%;
   position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
 }
 
 
-#images4{
-  height: 100px;
-  width: 100px;
-  float: left;
+#images4 {
+  width: 100%;
   position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
+}
+
+#images5 {
+  width: 100%;
+  position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
+}
+
+#images6 {
+  width: 100%;
+  position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
+}
+
+#images7 {
+  width: 100%;
+  position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
+}
+
+#images8 {
+  width: 100%;
+  position: absolute;
+  color: green;
+  border: 5px;
+  margin: 5px;
+}
+
+img {
+  width: 100% !important;
+  border-radius: 8px;
+  float: left;
+  margin-bottom: 10px !important;
+  position: relative;
+  border-style: solid;
+}
+
+
+.container {
+  width: 100%;
+  float: left;
+
+}
+
+.col-md {
+  width: 100%;
+}
+
+.navbar {
+  background-color: blue;
 }
 
 // Extra small devices (portrait phones, less than 576px)
