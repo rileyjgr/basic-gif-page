@@ -6,6 +6,9 @@
   <title>Gif BUttons</title>
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Ajax link -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!--My css -->
@@ -13,33 +16,42 @@
 </head>
 
 <body>
+  <nav class ="navbar navbar-expand lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <button class="btn btn-outline-success" id="cat-button" type="button">Meow</button>
+        </li>
+          <button class="btn btn-outline-success" id="pepe-button" type="button">Incoming Pepe</button>
+        <li class="nav-item active">
+          <button class="btn btn-outline-success" id="chess-button" type="button">E4!!</button>
+        </li>
+        <li class="nav-item active">
+          <button class="btn btn-outline-success" id="dog-button" type="button">Woof</button>
+        </li>
+        <li class="nav-item active">
+          <textarea id="search-input" name="userInput" class="textbox" placeholder="Search for a gif, input text here"></textarea>
+          <button class="btn btn-outline-success" id="input-button" name="go-button" type="button">Search for a gif</button>
+        </li>
+    </div>
+  </nav>
 
-  <button id="cat-button">Meow</button>
-  <button id="pepe-button">Incoming Pepe</button>
-  <button id="chess-button">E4!!</button>
-  <button id="dog-button">Woof</button>
-  <input id="search-button" type="text"></div>
-  <button id="userInput">Search for a gif</button>
   <div class="container">
     <div class ="row">
-    <div class="col-sm">
-      <div id="images1">
+      <div class="col-sm">
+        <gif class="ml-3" id="images1">
       </div>
-    </div>
-    <div class="col-sm">
-      <div id="images2">
+      <div class="col-sm">
+        <gif class="ml-3" id="images2">
       </div>
-    </div>
-    <div class="col-sm">
-      <div id="images3">
+      <div class="col-sm">
+         <gif class="ml-3" id="images3">
       </div>
-    </div>
-    <div class="col-sm">
-      <div id="images4">
+      <div class="col-sm">
+         <gif class="ml-3" id="images4">
       </div>
-    </div>
-    </div>
-  </div>
+     </div>
+   </div>
   <!-- Jquery Link -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/js/getgifs.js"></script>

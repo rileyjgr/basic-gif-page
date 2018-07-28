@@ -117,16 +117,19 @@ $("#dog-button").on("click", function() {
     $("#images4").prepend(dogImage);
   });
 });
-/* let goSearch = () => {
-  $('#search-button').on('submit', function() {
-    var tag_Id= $(this).children('input[name=tag_Id]').val();
 
+
+
+let goSearch = () => {
+  $('#search-input').on('submit', function() {
+    var tag_Id= $(this).children('input[name=userInput]').val();
+    var tag_Item= $(this).find('input[name="input-button"]').text();
 
   });
 }
-
+/*
 //user input
-$("#userInput).on("click", function() {
+$("#input-button).on("click", function() {
 
   //api key with gif type
   var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=Jouf48SlZuDz7W7ODP6bYA6q5ZBEDcGV&tag=" + goSearch;

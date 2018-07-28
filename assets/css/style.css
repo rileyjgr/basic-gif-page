@@ -1,18 +1,52 @@
 button {
   padding: 20px;
-  maring: 15px;
+  margin: 5px;
+  float: left;
 }
 
 textarea {
+  margin: 5px;
   resize: none;
-  height: 15px;
+  height: 30px;
+  width: 225px;
+}
+
+gif {
+  height: 100px;
+  width: 100px;
 }
 
 #images1{
   height: 100px;
   width: 100px;
+  float: left;
+  align: left;
+  position: absolute;
 }
 
+
+#images2{
+  height: 100px;
+  width: 100px;
+  float: left;
+  position: absolute;
+}
+
+
+#images3{
+  height: 100px;
+  width: 100px;
+  float: left;
+  position: absolute;
+}
+
+
+#images4{
+  height: 100px;
+  width: 100px;
+  float: left;
+  position: absolute;
+}
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
