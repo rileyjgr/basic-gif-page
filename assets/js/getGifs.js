@@ -292,4 +292,23 @@ $("#input-button).on("click", function() {
     $("#images5").prepend(searchImage);
   });
 });
- */
+*/
+
+
+
+const seearch = () => {
+ let reaction = $(this).attr("search-input");
+  let queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+      reaction + "?api_key=Jouf48SlZuDz7W7ODP6bYA6q5ZBEDcGV";
+
+  $ajax({
+    url: queryURL,
+    method: "GET",
+  })
+
+
+
+
+}
+
+
