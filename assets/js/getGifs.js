@@ -213,42 +213,30 @@ const clearPage = () => {
 }
 
 
-const input = () => {
+/* const input = () => {
   let searchText = document.getElementById('test');
+} */
+
+const goSearch = () => {
+  let search = document.getElementById("searchForm")
+  $(document).ready(function() {
+
+  event.preventDefault();
+
+  var $form = $(this),
+      term = $form.find('input[name="s"]').val(),
+      url = $form.attr('action');
+
+  var fmurl = "https://api.giphy.com/v1/gifs/random?api_key=Jouf48SlZuDz7W7ODP6bYA6q5ZBEDcGV&tag=" +fmurl;
+
+    $.getJSON(fmurl, function(data) {
+      var html = '';
+      $.each(data.results.trackmatches.track, function(i, item) {
+          html += "<p><a href=" + item.url + " target='_blank'>" + item.name + " - " + "Play count : " +item.playcount + "</a></p>" + "<img>" + item.artwork + "</img>";
+      });
+      $('#results').append(html);
+      console.log(fmurl);
+  });
+  });
 }
-
-
-$("#input-button").on("click", function() {
-
-  var searchText = $("#searh-input").keypress(function() {
-
-  });
-
-  let queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      searchText + "?api_key=Jouf48SlZuDz7W7ODP6bYA6q5ZBEDcGV";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-
-  .then(function(response) {
-
-    //
-    var imageUrl = response.data.image_original_url;
-
-    //
-    var searchImage = $("<img>");
-
-    //
-    searchImage.attr("src", imageUrl);
-    searchImage.attr("alt", "search image");
-
-    //
-    $("#images8").prepend(searchImage);
-
-  });
-  console.log(searchText);
-
-});
-
+]

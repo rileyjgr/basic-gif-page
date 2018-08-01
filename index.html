@@ -35,10 +35,12 @@
         <li class="nav-item active">
           <button class="btn btn-outline-success" id="wtf-button" type="button">WTF?</button>
         </li>
-        <li class="nav-item active">
-          <textarea id="search-input" name="userInput" class="textbox" placeholder="Search for a gif, input text here" onkeypress="input()"></textarea>
-          <button class="btn btn-outline-success" id="input-button" name="go-button" type="button" onclick="search()" >Search for a gif</button>
-        </li>
+          <li class="nav-item active">
+            <form action="/wphmusic/" id="searchForm">
+               <input type="text" name="s" placeholder="Search for a gif" />
+               <input type="submit" value="Search" onclick="goSearch()"/>
+            </form>
+          </li>
         <li class ="nav-item active">
           <button class="btn btn-outline-success" id="clear-button" type="button" onclick="clearPage()">Clear the page</button>
         </li>
