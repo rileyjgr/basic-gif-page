@@ -127,14 +127,14 @@ $("#dog-button").on("click", function() {
   });
 });
 
-
+/*
 let goSearch = () => {
   $('#search-input').on('submit', function() {
     var tag_Id= $(this).children('input[name=userInput]').val();
     var tag_Item= $(this).find('input[name="input-button"]').text();
 
   });
-}
+} */
 
 //Random gif
 $("#random-button").on("click", function() {
@@ -217,7 +217,34 @@ const clearPage = () => {
   let searchText = document.getElementById('test');
 } */
 
-const goSearch = () => {
+$("#searchForm").on("click", function(){
+
+  var $form = $(this),
+  term = $form.find('input[name="s"]').val(),
+  url = $form.attr('action');
+
+  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=Jouf48SlZuDz7W7ODP6bYA6q5ZBEDcGV&tag=" + term;
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+    .then(function(response) {
+
+    var imageUrl = response.data.image_original_url;
+
+    var searchImage = $("<img>");
+
+    searchImage.attr("src", imageUrl);
+    searchImage.attr("alt", "search image");
+
+    $("#images8").prepend(searchImage);
+  });
+
+});
+
+/* const goSearch = () => {
   let search = document.getElementById("searchForm")
   $(document).ready(function() {
 
@@ -229,14 +256,21 @@ const goSearch = () => {
 
   var fmurl = "https://api.giphy.com/v1/gifs/random?api_key=Jouf48SlZuDz7W7ODP6bYA6q5ZBEDcGV&tag=" +fmurl;
 
-    $.getJSON(fmurl, function(data) {
-      var html = '';
-      $.each(data.results.trackmatches.track, function(i, item) {
-          html += "<p><a href=" + item.url + " target='_blank'>" + item.name + " - " + "Play count : " +item.playcount + "</a></p>" + "<img>" + item.artwork + "</img>";
-      });
-      $('#results').append(html);
-      console.log(fmurl);
-  });
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+  .then(function(response) {
+
+    var imageUrl = response.data.image_original_url;
+
+    var searchImage = $("<img>");
+
+    searchImage.attr("src", imageUrl);
+    searchImage.attr("alt", "search image");
+
+    $("#images8").prepend(searchImage);
   });
 }
-]
+ */
